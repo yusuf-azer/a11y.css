@@ -3,6 +3,12 @@
 
 var a11ycss = a11ycss || {};
 
+window.browser = (function () {
+	return window.msBrowser ||
+		window.browser ||
+		window.chrome;
+})();
+
 a11ycss.checkalts = {
 	imgs : {},
 	namespace: "a11ycss_checkalts_",

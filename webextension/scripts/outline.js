@@ -29,7 +29,7 @@ function removeOutline() {
  */
 function storeOutline(bOutline) {
 	let outline = { isSet: bOutline };
-	let setting = browser.storage.local.set({ outline });
+	let setting = BROWSER.storage.local.set({ outline });
 	setting.then(null, onError); // just in case
 }
 
