@@ -29,7 +29,8 @@
 				"<all_urls>"
 			],
 			"js": [
-				"/scripts/injected/checkalts.js"
+				"/scripts/injected/checkalts.js",
+				"/scripts/injected/browser-polyfill.js"
 			],
 			"run_at": "document_end"
 		}
