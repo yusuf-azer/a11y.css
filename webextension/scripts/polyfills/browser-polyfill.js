@@ -353,12 +353,21 @@ if (typeof browser === "undefined") {
     // (which is a read-only non-configurable property on the original target).
     const targetObject = Object.assign({}, chrome);
 
-    return wrapObject(targetObject, staticWrappers, apiMetadata);
-  };
+    window.browser = wrapObject(targetObject, staticWrappers, apiMetadata);
 
-  // The build process adds a UMD wrapper around this file, which makes the
-  // `module` variable available.
-  module.exports = wrapAPIs(); // eslint-disable-line no-undef
-} else {
-  module.exports = browser; // eslint-disable-line no-undef
+	// let's add storage to the mix just in case
+	// added by notabene march 2018
+	if (!window.browser.storage && window.chrome.storage) {
+
+	}
+
+
+};
+
+//   Removed for a11y.css
+//   // The build process adds a UMD wrapper around this file, which makes the
+//   // `module` variable available.
+//   module.exports = wrapAPIs(); // eslint-disable-line no-undef
+// } else {
+//   module.exports = browser; // eslint-disable-line no-undef
 }
