@@ -3,8 +3,7 @@
 // browser compatibility
 const BROWSER = (function () {
 	return window.msBrowser ||
-		window.browser ||
-		window.chrome;
+		window.browser;
 })();
 const BROWSER_STRING = window.chrome ? 'chrome' : 'browser';
 // const STORAGE = BROWSER.storage.sync || BROWSER.storage.local;
