@@ -1,3 +1,4 @@
+
 a11y.css
 ========
 
@@ -12,3 +13,24 @@ Please note that a substantial work has been accomplished to *document* the whol
 ## Version française
 Le wiki présentant le projet existe également [en Français](https://github.com/ffoodd/a11y.css/wiki/Introduction) !
 Veuillez noter qu'un travail conséquent a été fourni pour *documenter* l'ensemble du projet, de la couche Sass aux explications de chaque test en passant par les sélecteurs et astuces CSS. Je vous recommande de faire un tour sur [le site de documentation d'a11y.css (en anglais)](https://ffoodd.github.io/a11y.css/).
+
+
+Adjustments in Fork:
+===================
+
+## Advices:
+
+If link has title with target blank ignore advice
+´´´
+[target$="blank"] > [target$="blank"]:not([title]) 
+´´´
+
+## Warning:
+*Oppiniated adjustment* 
+Remove warnings for empty-nodes. Since in my work I have many decorative elements, this warning is not helpful 
+
+```
+*:empty
+*:blank
+*:-moz-only-whitespace
+```
