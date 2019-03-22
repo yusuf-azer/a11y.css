@@ -16,4 +16,3 @@ gulp.task('translate', require('./tasks/translate'));
 // Meta tasks
 gulp.task('docs', ['sassdoc', 'hologram']);
 gulp.task('lints', ['scss-lint', 'css-lint']);
-gulp.task('default', ['sass']);

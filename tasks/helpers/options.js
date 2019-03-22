@@ -1,5 +1,5 @@
 module.exports = {
-  source: './sass/**/*.scss',
+  source: './sass/**/*.custom.scss',
   destination: './css',
   hologramsource: './docs/Hologram/test-assets',
   hologramhtmlsource: './docs/Hologram/tests/*.html',

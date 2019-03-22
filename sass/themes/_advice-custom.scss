@@ -1,0 +1,36 @@
+@charset 'UTF-8';
+
+/*doc
+---
+title: "Link opening new tab"
+name: target-blank
+category: Advices
+---
+
+##Description
+A link opening new tab or window should warn user about its behaviour.
+You could use a `[title]`, for example.
+
+##References
+* <http://references.modernisation.gouv.fr/rgaa/criteres.html#crit-13-2>
+* <http://www.w3.org/TR/WCAG20/#navigation-mechanisms-refs>
+* <http://www.w3.org/TR/WCAG20/#consistent-behavior-no-extreme-changes-context>
+* <http://www.w3.org/TR/WCAG-TECHS/H33.html>
+* <http://www.w3.org/TR/WCAG-TECHS/H83.html>
+* <http://www.w3.org/TR/WCAG-TECHS/F22.html>
+
+##Selector
+```css_example
+[target$="blank"]
+```
+
+##Test
+```html_example
+<a href="/" target="_blank" rel="noopener noreferrer">New tab</a>
+```
+*/
+[target$="blank"]:not([title]) {
+  @include advice('target-blank-not-blank');
+}
+
+@include disable-tests('advice:target-blank');
