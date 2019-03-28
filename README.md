@@ -20,9 +20,9 @@ Adjustments in Fork:
 ## Advices:
 
 If link has title with target blank ignore advice
-´´´
+```
 [target$="blank"] > [target$="blank"]:not([title]) 
-´´´
+```
 
 ## Warning:
 *Oppiniated adjustment* 
